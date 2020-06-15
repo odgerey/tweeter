@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px
+}
+
+textarea {
+  background-color: #f4f1ec;
+  border-top:  black;
+  border-left: black;
+  border-right: black;
+  border-width: 5px;
+}
+
+button {
+  display: flex;
+  justify-content:center;
+  font-family: 'Bungee Shade', cursive;
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+.submission {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family:'Bungee Shade', cursive;
+  margin: 10px;
+}

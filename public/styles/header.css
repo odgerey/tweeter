@@ -1,0 +1,19 @@
+header {
+  height: 400 px;
+  width: 100%;
+  background-color: #cc8800;
+  background-image: url(http://www.transparenttextures.com/patterns/arabesque.png);
+}
+
+.images {
+  padding: 10px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
