@@ -1,8 +1,9 @@
 form {
   display: flex;
   justify-content: center;
+  justify-items: center;
   flex-direction: column;
-  width: 800px
+  width:1000px
 }
 
 textarea {
@@ -12,6 +13,8 @@ textarea {
   border-right: black;
   border-width: 5px;
 }
+
+
 
 button {
   display: flex;
@@ -27,4 +30,8 @@ button {
   justify-content: space-between;
   font-family:'Bungee Shade', cursive;
   margin: 10px;
+}
+
+.red {
+  color: red;
 }
