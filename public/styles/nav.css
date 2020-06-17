@@ -21,3 +21,9 @@ nav {
 a {
 color: #ffffff;
 }
+
+.sticky {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}

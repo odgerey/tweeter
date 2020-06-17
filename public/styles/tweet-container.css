@@ -4,7 +4,6 @@ article {
   justify-content: center;
   border: 5px solid;
   padding: 5px;
-  box-shadow: 10px 10px grey;
 }
 
 article header {
@@ -31,12 +30,14 @@ article p.tweet {
   justify-content: center;
   align-content: center;
   border-bottom: 5px solid;
-  padding: 20px;
-  height: 70%
+  padding: 10px;
 }
 
 
-
-
+.hover {
+  box-shadow: 10px 10px grey;
+  color: #000000 ;
+  font-weight: bold;
+}
 
 
