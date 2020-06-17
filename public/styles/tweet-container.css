@@ -1,0 +1,42 @@
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px solid;
+  padding: 5px;
+  box-shadow: 10px 10px grey;
+}
+
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article h2.alias {
+  color: lightgrey
+}
+
+article footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  border: none;
+}
+
+
+article p.tweet {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-bottom: 5px solid;
+  padding: 20px;
+  height: 70%
+}
+
+
+
+
+
+

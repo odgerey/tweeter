@@ -21,6 +21,9 @@ $('#tweet-text').on("input", function(){
      count.text(maxLength - currentLength)
 
   });  
+
+  const dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
   
   });
 

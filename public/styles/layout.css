@@ -21,15 +21,15 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container {
-  display: flex; 
-  justify-content: center;
-  width: 90%;
-  background-color: #f4f1ec;
-}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  font-family: 'Bungee Shade', cursive;
 font-family: 'Source Sans Pro', sans-serif;
  */
+
+ .container {
+  width: 90%;
+  margin: auto;
+  background-color: #f4f1ec;
+}

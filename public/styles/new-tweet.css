@@ -3,7 +3,8 @@ form {
   justify-content: center;
   justify-items: center;
   flex-direction: column;
-  width:1000px
+  width: 100%;
+  margin: 5px;
 }
 
 textarea {
@@ -12,8 +13,9 @@ textarea {
   border-left: black;
   border-right: black;
   border-width: 5px;
+  width: 100%;
+  margin: 5px
 }
-
 
 
 button {
@@ -22,6 +24,7 @@ button {
   font-family: 'Bungee Shade', cursive;
   background-color: #4056A1;
   color: #ffffff;
+  margin: 5px
 }
 
 .submission {
@@ -29,7 +32,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   font-family:'Bungee Shade', cursive;
-  margin: 10px;
+  width: 100%;
 }
 
 .red {
