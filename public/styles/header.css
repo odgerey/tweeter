@@ -1,5 +1,5 @@
 .topofpage {
-  padding-top: 120px;
+  padding-top: 120px; /* NEED TO FIND A BETTER METHOD WITH STICKY NAV BAR, UNRESPONSIVE*/
   height: 400 px;
   width: 100%;
   background-color: #cc8800;
@@ -13,9 +13,10 @@
   align-items: center;
 }
 
-h2 {
+.topofpage h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  color:#ffffff
 }

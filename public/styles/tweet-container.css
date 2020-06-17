@@ -10,6 +10,7 @@ article header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: center;
 }
 
 article h2.alias {
