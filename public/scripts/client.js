@@ -44,18 +44,22 @@ return arrayOfTweets;
 // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
 }
-
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 
 const createTweetElement = function(tweet) {
   const $tweet =`
       <article>
         <header>
-        <h2><img src="${tweet.user.avatars}">${tweet.user.name}</h2>
-        <h2 class="alias">${tweet.user.handle}</h2>
+        <h2><img src="${tweet.user.avatars}">${escape(tweet.user.name)}</h2>
+        <h2 class="alias">${escape(tweet.user.handle)}</h2>
         </header>
 
-        <p class="tweet">${tweet.content.text}</p>
+        <p class="tweet">${escape(tweet.content.text)}</p>
         <footer> 
           <p><span id="datetime"></span></p>
           <time data-time="<?=$time?>"></time>
