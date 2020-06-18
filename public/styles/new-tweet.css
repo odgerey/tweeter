@@ -5,6 +5,7 @@ form {
   flex-direction: column;
   width: 100%;
   margin: 5px;
+  padding: 20px;
 }
 
 textarea {

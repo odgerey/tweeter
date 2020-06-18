@@ -4,6 +4,7 @@ article {
   justify-content: center;
   border: 5px solid;
   padding: 5px;
+  margin: 30px;
 }
 
 article header {
@@ -22,7 +23,7 @@ article footer {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  border: none;
+  border:none;
 }
 
 

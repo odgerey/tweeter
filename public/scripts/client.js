@@ -6,30 +6,30 @@
 
 $(document).ready(function() {
 // Fake data taken from initial-tweets.json
-  const data = [
-    {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-    },
-    {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-   }
-  ]
+  // const data = [
+  //   {
+  //   "user": {
+  //     "name": "Newton",
+  //     "avatars": "https://i.imgur.com/73hZDYK.png"
+  //     ,
+  //     "handle": "@SirIsaac"
+  //   },
+  //   "content": {
+  //     "text": "If I have seen further it is by standing on the shoulders of giants"
+  //   },
+  //   "created_at": 1461116232227
+  //   },
+  //   {
+  //   "user": {
+  //     "name": "Descartes",
+  //     "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //     "handle": "@rd" },
+  //   "content": {
+  //     "text": "Je pense , donc je suis"
+  //   },
+  //   "created_at": 1461113959088
+  //  }
+  // ]
 
 
 const renderTweets = function(tweets) {
@@ -38,7 +38,7 @@ const renderTweets = function(tweets) {
   for (let tweet of tweets){
   //arrayOfTweets.push(createTweetElement(tweet))
   const x = createTweetElement(tweet);
-  tweet_container.append(x);
+  tweet_container.prepend(x);
 }
 return arrayOfTweets;
 // calls createTweetElement for each tweet
@@ -69,30 +69,59 @@ const createTweetElement = function(tweet) {
 return $tweet;
 }
 
-renderTweets(data);
 
-const ajaxGet = function() {
+
+
+const loadTweets= function() {
   $.ajax(
     { url: "/tweets",
       method:"GET",
       dataType: "JSON",
-  }).then (function(response) {
-  console.log(response)
+  }).then (function(tweets) {
+    $('#tweet-text').empty();
+    renderTweets(tweets)
   });
 }
 
+// function validateForm() {
+//   const check = document.forms["form"]["#tweet-text"].value;
+//   if(check === "" || check === null) {
+//     alert ("Empty field!");
+//     return false;
+//   } else if (check.length > 140){
+//     alert ("Maximum characters surpassed")
+//     return false;
+//   } 
+  
+// }
+
+
 $('form').on('submit', (event) => {
   event.preventDefault();
+  const tweetValidation = $("#tweet-text").val()
+  console.log(tweetValidation)
+  if (tweetValidation === null || tweetValidation === "") {
+    alert("Empty field")
+    return false;
+  } else if (tweetValidation.length > 140){
+    alert("Maximum characters exceeded");
+    return false;
+  } else {
+  alert("THIS WORKS!");
+  }
+
+
+
 $.ajax ({
-   type: "POST",
+   method: "POST",
    url: "/tweets",
    data: $("form").serialize(), 
-   success: function(data){
-    alert("THIS WORKS!");
-  }
   }).then(function(response) {
     console.log(response);
+    loadTweets();
   })
 })
+
+loadTweets();
 
 });

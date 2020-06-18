@@ -50,7 +50,7 @@
   <main class="container">
 
       <section class="new-tweet">
-      <form method="POST" action="/tweets">
+      <form method="POST" action="/tweets" onsubmit="return validateForm()">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         
         <div class="submission">
