@@ -1,7 +1,7 @@
 .topofpage {
   padding-top: 120px; /* NEED TO FIND A BETTER METHOD WITH STICKY NAV BAR, UNRESPONSIVE*/
   height: 400 px;
-  width: 100%;
+  width: 50%;
   background-color: #cc8800;
   background-image: url(http://www.transparenttextures.com/patterns/arabesque.png);
 }
@@ -20,3 +20,11 @@
   padding-bottom: 20px;
   color:#ffffff
 }
+
+/* <-------IPAD/TABLET SPECIFIC FORMATTING ---->*/
+@media only screen and (max-width: 768px) {
+  .topofpage {
+    width: 100%;
+  }
+}
+

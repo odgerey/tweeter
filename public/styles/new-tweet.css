@@ -4,8 +4,8 @@ form {
   justify-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 5px;
-  padding: 20px;
+  /* margin: 5px; */
+  /* padding: 20px; */
 }
 
 textarea {
@@ -15,7 +15,11 @@ textarea {
   border-right: black;
   border-width: 5px;
   width: 100%;
-  margin: 5px
+  /* margin: 5px */
+}
+
+.new-tweet {
+  margin-bottom: 25px;
 }
 
 
@@ -38,4 +42,18 @@ button {
 
 .red {
   color: red;
+}
+
+#error {
+  color: red;
+  display: none;
+}
+
+/* <---------MOBILE SPECIFIC CSS-------->*/
+
+@media only screen and (max-width: 500px) {
+ 
+ .container {
+   padding: 30px;
+ }
 }

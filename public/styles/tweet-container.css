@@ -4,13 +4,14 @@ article {
   justify-content: center;
   border: 5px solid;
   padding: 5px;
-  margin: 30px;
+  margin-bottom: 25px;
+  /* margin: 30px; */
 }
 
-#tweet-container.hover {
+.new-tweet-box:hover {
   box-shadow: 10px 10px grey;
-  /* color: #000000 ;
-  font-weight: bold; */
+  color: #000000 ;
+  font-weight: bold;
 }
 
 
@@ -18,29 +19,54 @@ article header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  align-items: flex-start;
+  
 }
 
 article h2.alias {
-  color: lightgrey
+  color: lightgrey;
+  font-size: 1em
 }
+
+article h2.image {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
 
 article footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  align-content: flex-end;
   border:none;
+}
+
+article footer #user-buttons {
+  display: flex;
+  align-items: flex-end;
 }
 
 
 article p.tweet {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   border-bottom: 5px solid;
   padding: 10px;
 }
 
 
+/* <---------- MOBILE SPECIFIC FORMATTING ---------> */
 
+@media only screen and (max-width: 500px) {
+ 
+  article h2.alias {
+    font-size: 0.6em;
+  }
+
+  article h2 {
+    font-size: 1em;
+  }
+
+  article p.tweet {
+    font-size: 12px
+  }
+}
