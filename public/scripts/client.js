@@ -50,6 +50,10 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
+// // const alertMessage = function (error) {
+
+// }
+
 
 const createTweetElement = function(tweet) {
   const $tweet =`
@@ -61,8 +65,7 @@ const createTweetElement = function(tweet) {
 
         <p class="tweet">${escape(tweet.content.text)}</p>
         <footer> 
-          <p><span id="datetime"></span></p>
-          <time data-time="<?=$time?>"></time>
+          <p>${moment(tweet.created_at, "").fromNow()}</p>
           <div>
           <button type="retweet"><i class="fa fa-retweet" aria-hidden="true"></i></button>
           <button type="like"><i class="fa fa-heart" aria-hidden="true"></i></button>
@@ -103,16 +106,20 @@ const loadTweets= function() {
 $('form').on('submit', (event) => {
   event.preventDefault();
   const tweetValidation = $("#tweet-text").val()
-  console.log(tweetValidation)
   if (tweetValidation === null || tweetValidation === "") {
-    alert("Empty field")
+   
+    $("#error").text("Field is empty")
+    //alert("What")
     return false;
   } else if (tweetValidation.length > 140){
-    alert("Maximum characters exceeded");
+    
+    $("#error").text("Maximum characters exceeded")
+    //alert("Maximum characters exceeded");
     return false;
-  } else {
-  alert("THIS WORKS!");
   }
+  // } else {
+  // alert("THIS WORKS!");
+  // }
 
 
 

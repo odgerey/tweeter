@@ -7,6 +7,13 @@ article {
   margin: 30px;
 }
 
+#tweet-container.hover {
+  box-shadow: 10px 10px grey;
+  /* color: #000000 ;
+  font-weight: bold; */
+}
+
+
 article header {
   display: flex;
   flex-direction: row;
@@ -35,11 +42,5 @@ article p.tweet {
   padding: 10px;
 }
 
-
-.hover {
-  box-shadow: 10px 10px grey;
-  color: #000000 ;
-  font-weight: bold;
-}
 
 
